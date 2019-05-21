@@ -1,0 +1,12 @@
+<div>
+  <!-- 把整个伏组件传给子组件  [home]="this" -->
+  <app-son 
+   [title]= "title"
+   [run]= "run" 
+   [father]= "this"
+    #father 
+    (outer)="huoqu($event)"></app-son>
+  <!-- 伏组件执行子组件的方法和数据 #father-->
+  <button (click)="ftbuttom()">获取子组件的数据</button>
+  <!-- 广播数据 -->
+</div>

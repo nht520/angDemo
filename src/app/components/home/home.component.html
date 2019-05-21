@@ -1,0 +1,46 @@
+<p>
+  {{title}}  <br/>
+</p>
+<!--引入图片,从后台后去图片-->
+<div class="home">
+  <img src="assets/images/timg.jpg" alt="收藏"/>
+  <img src={{imgUrl}} />
+</div>
+
+<!--循环渲染数据 显示数据的索引-->
+<ul>
+  <li *ngFor="let item of list; let key=index;" >
+    <span  *ngIf="key==1" class="red">
+         {{key}} + {{item.title}}
+    </span>
+    <span  *ngIf="key!==1" class="blue">
+         {{key}} + {{item.title}}
+    </span>
+  </li>
+</ul>
+<!--ngIf 条件判断语句-->
+<div class="home" *ngIf="flag">
+  <img src="assets/images/01.jpg"  alt="" />
+</div>
+<div class="home" *ngIf="!flag">
+  <img src="assets/images/02.jpg"  alt="" />
+</div>
+<!--*ngSwith 条件判断语句-->
+<br/>
+<ul ngSwitch={{orderstatus}}>
+  <li *ngSwitchCase="1">待支付</li>
+  <li *ngSwitchCase="2">已支付</li>
+  <li *ngSwitchCase="3">待收获</li>
+  <li *ngSwitchCase="4">已收货</li>
+  <li *ngSwitchDefault>已删除</li>
+</ul>
+<h1 #imchild >我是mychild</h1>
+<button type="button" (click)="submit()">imchild</button>
+<span  (click)="huoqu($event)" [ngClass]="{'userone':!userflag}">男</span> <span (click)="huoqu($event)" [ngClass]="{'userone':userflag}">女</span>
+<!--条件判断语句 动态绑定属性 改变样式 [ngclass] [ngstyle]-->
+<!--如果 flage等于true就显示red的样式，如果等于false就显示blue样式-->
+<h1 [ngClass]="{'red':!flag,'blue':flag}">888888888888</h1>
+<!--ngstyle  如果你是固定的值就加引号  如果是动态的值就不加引号-->
+<p [ngStyle]="{'color':'blue'}">我是一个p标签</p>
+<p [ngStyle]="{'color':attr}">我是两个p标签</p>
+

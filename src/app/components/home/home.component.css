@@ -1,0 +1,28 @@
+.home img{
+  width: 100px;
+  height: 100px;
+}
+ul li{
+  list-style: none;
+}
+.red{
+  color: #f00;
+}
+.blue{
+  color: blue;
+}
+.org{
+  color: orange;
+}
+.useractive{
+  background: #000000;
+  color: #ffffff;
+  margin-right: 2%;
+  border-radius: 5px;
+}
+.userone{
+  border: 1px solid #000000;
+  color: #000000;
+  margin-right: 2%;
+  border-radius: 5px;
+}

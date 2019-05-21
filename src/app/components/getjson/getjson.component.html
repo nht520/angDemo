@@ -1,0 +1,12 @@
+<p>
+  getjson works!
+</p>
+<button (click)="getdate()">请求</button>
+<ul>
+  <li *ngFor="let item of list; let key=index">
+    {{item.title}}
+  </li>
+</ul>
+<button (click)="postdate()">提交</button>
+<button (click)="getjsonp()">getjsonp</button>
+<button (click)="getaxios()">getaxios获取数据</button>

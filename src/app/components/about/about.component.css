@@ -1,0 +1,16 @@
+#about{
+  width: 100%;
+}
+#about .left{
+    width:10%;
+    height:400px;
+    float: left;
+    border:1px solid #f00;
+}
+#about .right{
+    width: 90%;
+    flex:1px;
+}
+.aboutactive{
+  background: #f00;
+}

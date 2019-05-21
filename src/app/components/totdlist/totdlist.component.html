@@ -1,0 +1,44 @@
+<!--搜索功能-->
+<input type="text" class="sername" [(ngModel)]="name">
+<el-button type="danger" class="serch" (click)="serch()" size="mini">搜索</el-button>
+<!-- 日期插件 -->
+<el-date-picker (modelChange)="handle($event)"
+  (clear-click)="clearClickHandle($event)">
+</el-date-picker>
+<ul>
+  <li *ngFor="let item of list; let key=index">
+    {{item}} <span (click)="delt(key)">删除</span>
+  </li>
+</ul>
+<!--todoils-->
+<h2>TODOLIST</h2>
+<input type="text" class="sername" [(ngModel)]="addnaame" (keyup)="keyup($event)">
+<button class="serch"  (click)="add($event)"> 添加</button>
+
+<h2 class="biaoti">待办事项</h2>
+<ul>
+  <li *ngFor="let item of todoList; let key=index" [hidden] ="item.status ==1">
+    <input type="checkbox" [(ngModel)]="item.status" (ngModelChange)="cheack()" >
+    {{item.title}} <button (click)="addDelt(key)">X</button>
+  </li>
+</ul>
+<h2 class="biaoti" >已完成事项</h2>
+<ul>
+  <li *ngFor="let item of todoList; let key=index" [hidden] ="item.status ==0">
+    <input type="checkbox" [(ngModel)]="item.status" (ngModelChange)="cheack()">
+     {{item.title}}  <button (click)="addDelt(key)">X</button>
+  </li>
+</ul>
+
+
+<!--  ngif判断 -->
+<div>
+  <p *ngFor="let item of nglist" >
+    <span *ngIf="item.id === 0">{{ item.title}}</span>
+  </p>
+  
+  <br/>
+  <p *ngFor="let item of nglist" >
+    <span *ngIf="item.id === 1">{{ item.title}}</span>
+  </p>
+</div>

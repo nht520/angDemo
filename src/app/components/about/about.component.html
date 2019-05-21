@@ -1,0 +1,18 @@
+<div id="about">
+  <h1>我是about组件</h1>
+  <!-- 设置嵌套路由 -->
+  <div class="left">
+    <ul>
+      <li>
+        <a [routerLink]="[ '/about/abtwelcome' ]" routerLinkActive="aboutactive">todoList</a>
+      </li>
+      <br/>
+      <li>
+        <a [routerLink]="[ '/about/setting' ]" routerLinkActive="aboutactive">make</a>
+      </li>
+    </ul>
+  </div>
+  <div class="right">
+    <router-outlet></router-outlet>
+  </div>
+</div>

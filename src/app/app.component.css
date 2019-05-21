@@ -1,0 +1,21 @@
+ul {
+  width: 100%;
+  height: 40px;
+  background: black;
+  line-height: 40px;
+}
+ul li {
+  width: 10%;
+  float: left;
+  margin-left: 5%;
+  list-style: none;
+  color:blue;
+}
+ul li a{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.active{
+  background: #ff0000;
+}

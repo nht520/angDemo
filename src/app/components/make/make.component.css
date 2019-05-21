@@ -1,0 +1,11 @@
+.make{
+  background: #eaeaea;
+  width: 50%;
+  margin: 0 auto;
+}
+.makeButton{
+  background: #f00;
+  padding: 1% 4%;
+  color: #ffffff;
+  border-radius: 10px;
+}

@@ -1,0 +1,23 @@
+<p>
+  class 劝戒 works!
+</p>
+<div>
+  <!-- git传值 跳转的时候 [queryParams]={aid:key} -->
+  <!-- <ul>
+    <li *ngFor="let item of list; let key=index">
+      <a [routerLink]="['/details']" [queryParams]="{aid:key}">git传值{{item}}</a>
+    </li>
+  </ul> -->
+  <!-- git传值 -->
+  <!-- <button class="clbutton" (click)="gitrouter()">git传值</button> -->
+
+  <!-- 动态路由传值 -->
+  <ul>
+    <li *ngFor="let item of list; let key=index">
+      <a [routerLink]="[ '/details/', key ]">{{item.mealName}}{{key}}</a>
+    </li>
+  </ul>
+  <!-- 普通 动态js路由跳转 -->
+  <button class="clbutton" (click)="dtrouter()">js跳转</button>
+
+</div>

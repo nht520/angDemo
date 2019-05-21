@@ -1,0 +1,23 @@
+<div>
+  <!--  操作demo-->
+  <h1 id="deom" *ngIf="flag">
+      99955555
+  </h1>
+
+  <!--  -->
+  <div #mybox> viewChild</div>
+  <!-- 父子组件 -->
+  <app-header #header [name]="title" [frun]="frun"></app-header>
+  <!-- 1.父子组件传值  在子组件上赋值 [name]="title" -->
+  <!-- 2.子组件引入 input模块 -->
+  <!-- 3.@Input() name : string; console.log(this.name)获取数据-->
+  <br/>
+  <button class="button" (click)="huoqu()" type="button">获取子组件的方法</button>
+  <br/>
+  <!-- css3 动画 -->
+  <button class="asidebutton" (click)="side()">点击</button>
+  <div id="aside"  >
+    侧边栏
+  </div>
+
+</div>

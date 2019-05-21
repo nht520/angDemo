@@ -1,0 +1,41 @@
+<h1>我是 login works!</h1>
+<!--angualr 模版里面绑定数据-->
+<h5>{{list}}</h5>
+<h4>{{username}}+{{student}}</h4>
+<h3>{{from.username}}</h3>
+<h6>{{message}}</h6>
+<!--angualr 模版里面绑定属性-->
+<div :title={{title}}>
+  鼠标秒上去看看
+</div>
+<!--angualr 模版里面绑定html/  解释html标签-->
+<!--绑定class-->
+<div innerHTML={{content}} class ="active" ></div>
+
+<!--angualr模版允许做简单的运算-->
+1+2={{1+2}}
+<br/>
+
+<!--循环数组-->
+<ul>
+  <li *ngFor="let item of List">
+    {{item.useranme}}+{{item.id}}
+  </li>
+  <br/>
+  <!---->
+<!--  <strong>循环数组，让数组的第一个元素样式为red</strong>-->
+  <li *ngFor="let item of items; let key=index" [ngClass]="{'red':key==0,'blue':key==1,'org':key==2}">
+    {{item}}
+  </li>
+<!--  循环二维数组-->
+  <li *ngFor="let item of cars" >
+    <h2>{{item.cate}}</h2>
+    <ul>
+      <li *ngFor="let v of item.list">
+          {{v.title}}:{{v.price}}
+      </li>
+    </ul>
+  </li>
+
+</ul>
+

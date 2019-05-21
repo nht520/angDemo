@@ -1,0 +1,35 @@
+<div>
+  <ul class="make">
+    <li>
+      姓名：<input id="username" [(ngModel)]="userFrom.username" type="text" placeholder="请输入姓名"  />
+<!--      ang 管道 ｜ json 代表转换成json子字符串-->
+      <pre>{{  userFrom | json  }}</pre>
+    </li>
+    <li>
+      男： <input type="radio" value="1"   [(ngModel)]="userFrom.sex" />
+    </li>
+    <li>
+      女： <input type="radio" value="2"   [(ngModel)]="userFrom.sex"/>
+    </li>
+    <li>
+      城市：
+      <select name="city" id="city" [(ngModel)]="userFrom.citys">
+        <option [value]="item"  *ngFor="let item of userFrom.cityslist">{{item}}</option>
+      </select>
+    </li>
+    <li>
+      好池的有：
+      <span *ngFor="let item of userFrom.hobby; let key=index">
+        <input type="checkbox" [id]="'check'+key" [(ngModel)]="item.checked">
+        <label [for]="'check'+key">{{item.title}}</label>
+      </span>
+    </li>
+    <li>
+      备注：
+      <textarea [(ngModel)]="userFrom.mark" ></textarea>
+    </li>
+    <li>
+      <button (click)="submit()" class="makeButton">获取数据</button>
+    </li>
+  </ul>
+</div>
