@@ -11,7 +11,7 @@ import Axios from 'axios';
 })
 export class ClassComponent implements OnInit {
   list: any = [];
-  constructor( public router: Router, public besurl: BesurlService) {
+  constructor( public router: Router, public besurl: BesurlService,) {
 
   }
 
@@ -47,3 +47,25 @@ export class ClassComponent implements OnInit {
   }
 
 }
+/*
+
+js跳转路由
+    1、动态路由
+      1、引入声明模块
+          import { Router} from '@angular/router';
+          constructor(public router:Router) { }
+       2、跳转
+         this.router.navigate(['/home']);
+         this.router.navigate(['/newscontent/','1243'])
+    2、get传值
+       1、引入声明模块
+          import { Router} from '@angular/router';
+          constructor(public router:Router) { }
+       2、跳转
+       this.router.navigate(['/news'],{
+          queryParams:{
+            aid:123
+          }
+       });
+
+*/

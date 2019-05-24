@@ -3,8 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>AngApp</title>
-  <base href="/">
-
+  <!-- <base href="./"> -->
+  <!-- 如果打包页面空白 打不到资源
+   <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+  替换<base href="./">
+  在appmodule 
+  添加
+  { provide: LocationStrategy, useClass: HashLocationStrategy }
+  -->
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />

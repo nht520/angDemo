@@ -37,6 +37,7 @@ import { SettingComponent } from './components/about/setting/setting.component';
 import { StorageService } from './services/storage.service';
 import { HttpserviceService } from './services/httpservice.service';
 import { AppRoutingModule } from './app-routing.module';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 // @NgModule装饰器 ， @NGMOdule接受一个元数据对象，告诉angular 如何编译和启动应用
 @NgModule({
   declarations: [ /*配置当前项目运行的组件*/
@@ -56,6 +57,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   providers: [
     StorageService, HttpserviceService,
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ], /*配置项目所需要的服务*/
   /* bootstrap 指定应用的主视图(称为根组件) 通过引导根Appmodule来启动应用，一版是根组件 */
   bootstrap: [AppComponent]
