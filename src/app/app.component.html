@@ -37,6 +37,17 @@
 <a [routerLink]="[ '/article' ]">商品模块</a> |
 <a [routerLink]="[ '/product' ]">文章模块</a> |
 <router-outlet></router-outlet>
+<nz-tabset>
+  <nz-tab nzTitle="Tab 1">
+    Content of Tab Pane 1
+  </nz-tab>
+  <nz-tab nzTitle="Tab 2">
+    Content of Tab Pane 2
+  </nz-tab>
+  <nz-tab nzTitle="Tab 3">
+    Content of Tab Pane 3
+  </nz-tab>
+</nz-tabset>
 <!-- 使用自定义模块 实现路由懒加载  
    否则页面过多会导致webpack打包异常的大，造成进入首页时，需要加载的内容过多，时间过长，会出啊先长时间的白屏，即使做了loading也是不利于用户体验-->
 <!-- 手机端访问 ng serve --host 192.168.5.2 -->

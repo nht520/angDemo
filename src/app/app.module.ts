@@ -12,6 +12,7 @@ import { UserModule } from './module/user/user.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ElModule } from 'element-angular';
 import 'element-angular/theme/index.css';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
 // if you use webpack, import style;
 // 根组件
 // 引入组件
@@ -52,6 +53,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     HttpClientJsonpModule, AppRoutingModule,
     UserModule,
     BrowserAnimationsModule,
+    NgZorroAntdModule,
     ElModule.forRoot(),
      /** 导入 ng-zorro-antd 模块 **/
   ],
